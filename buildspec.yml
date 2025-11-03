@@ -12,15 +12,11 @@ phases:
     commands:
       - echo "BUILD PHASE"
       - echo "Current directory: $(pwd)"
-      - echo "Listing directory contents recursively:"
-      - ls -laR
   post_build:
     commands:
       - echo "POST-BUILD PHASE"
       - echo "Current directory: $(pwd)"
-      - echo "Listing directory contents recursively:"
-      - ls -laR
-  artifacts:
-    files:
-      - "**/*"
-    name: cleanup-${CODEBUILD_BUILD_NUMBER}
+artifacts:
+  files:
+    - '**/*'
+  name: cleanup-${CODEBUILD_BUILD_NUMBER}
