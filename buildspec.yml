@@ -5,26 +5,22 @@ phases:
     runtime-versions:
       nodejs: 20
       python: 3.12
-
   pre_build:
     commands:
       - echo "PRE-BUILD PHASE"
-
   build:
     commands:
       - echo "BUILD PHASE"
       - echo "Current directory: $(pwd)"
       - echo "Listing directory contents recursively:"
       - ls -laR
-
   post_build:
     commands:
       - echo "POST-BUILD PHASE"
       - echo "Current directory: $(pwd)"
       - echo "Listing directory contents recursively:"
       - ls -laR
-
-artifacts:
-  files:
-    - "**/*"
-  name: cleanup-${CODEBUILD_BUILD_NUMBER}
+  artifacts:
+    files:
+      - "**/*"
+    name: cleanup-${CODEBUILD_BUILD_NUMBER}
