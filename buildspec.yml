@@ -14,14 +14,14 @@ phases:
     commands:
       - echo "BUILD PHASE"
       - echo "Current directory: $(pwd)"
-      - echo "Directory contents recursively:"
+      - echo "Listing directory contents recursively:"
       - ls -laR
 
   post_build:
     commands:
       - echo "POST-BUILD PHASE"
       - echo "Current directory: $(pwd)"
-      - echo "Directory contents recursively:"
+      - echo "Listing directory contents recursively:"
       - ls -laR
 
 artifacts:
